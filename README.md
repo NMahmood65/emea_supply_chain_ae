@@ -23,6 +23,8 @@ This project builds a modern, automated data system that models this real-world 
               v
 [Business-Ready Dashboards & Metrics] (Marts / Gold)
 
+```
+
 ## Step-by-Step Breakdown of the Pipeline
 
 ### Stage 1: The Raw Data Landing (Bronze Layer)
