@@ -1,4 +1,3 @@
-readme_content = '''# EMEA Supply Chain Resilience & Carbon Accounting Pipeline
 
 [![dbt Analytics Engineering CI](https://github.com/NMahmood65/emea_supply_chain_ae/actions/workflows/ci_pipeline.yml/badge.svg)](https://github.com/NMahmood65/emea_supply_chain_ae/actions/workflows/ci_pipeline.yml)
 
