@@ -1,0 +1,25 @@
+﻿name: 'emea_supply_chain'
+version: '1.0.0'
+config-version: 2
+
+profile: 'emea_supply_chain'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+
+seeds:
+  emea_supply_chain:
+    +schema: raw_reference
+
+models:
+  emea_supply_chain:
+    staging:
+      +materialized: view
+      +schema: staging
+    intermediate:
+      +materialized: view
+      +schema: intermediate
+    marts:
+      +materialized: table
+      +schema: marts

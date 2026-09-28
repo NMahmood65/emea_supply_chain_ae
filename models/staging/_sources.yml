@@ -1,0 +1,32 @@
+version: 2
+
+sources:
+  - name: raw_bronze
+    schema: raw_bronze
+    description: "Raw operational Bronze layer populated directly from ERP extracts and carrier telemetry queues."
+    tables:
+      - name: raw_erp_purchase_orders
+        description: "ERP purchase orders containing order quantities, commercial Incoterms, and line item weights."
+        loaded_at_field: created_at
+        freshness:
+          warn_after: {count: 720, period: day}
+          error_after: {count: 1440, period: day}
+        columns:
+          - name: po_number
+            description: "Unique Purchase Order identifier."
+            tests:
+              - unique
+              - not_null
+
+      - name: raw_carrier_milestone_events
+        description: "Append-only container tracking log. Events arrive asynchronously and out of sequence."
+        loaded_at_field: recorded_at
+        freshness:
+          warn_after: {count: 720, period: day}
+          error_after: {count: 1440, period: day}
+        columns:
+          - name: event_id
+            description: "Unique event identifier."
+            tests:
+              - unique
+              - not_null

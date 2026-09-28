@@ -1,0 +1,109 @@
+version: 2
+
+models:
+  - name: metricflow_time_spine
+    description: "Daily calendar time spine for MetricFlow time aggregations."
+    time_spine:
+      standard_granularity_column: date_day
+    columns:
+      - name: date_day
+        granularity: day
+
+semantic_models:
+  - name: sem_shipment_carbon_reconciliation
+    model: ref('fct_shipment_carbon_reconciliation')
+    description: "Semantic model for container freight fulfillment, geopolitical routing, and GLEC Scope 3 emissions."
+    
+    defaults:
+      agg_time_dimension: po_created_at
+
+    entities:
+      - name: po_id
+        type: primary
+
+    dimensions:
+      - name: po_created_at
+        type: time
+        type_params:
+          time_granularity: day
+      - name: carrier_code
+        type: categorical
+      - name: incoterm
+        type: categorical
+      - name: destination_hub_locode
+        type: categorical
+      - name: is_cape_reroute
+        type: categorical
+
+    measures:
+      - name: total_emissions
+        description: "Total transport carbon emissions in tCO2e."
+        agg: sum
+        expr: total_emissions_tco2e
+
+      - name: total_weight_tonnes
+        description: "Sum of cargo weight transported in metric tonnes."
+        agg: sum
+        expr: gross_weight_tonnes
+
+      - name: total_declared_value_eur
+        description: "Total declared value of merchandise transported in EUR."
+        agg: sum
+        expr: declared_value_eur
+
+      - name: shipment_count
+        description: "Total count of purchase orders/shipments handled."
+        agg: count
+        expr: po_id
+
+      - name: rerouted_shipment_count
+        description: "Count of shipments diverted around the Cape of Good Hope."
+        agg: sum
+        expr: is_cape_reroute
+
+metrics:
+  # Base simple metrics
+  - name: total_scope3_emissions_tco2e
+    description: "Total greenhouse gas emissions from international freight transport."
+    type: simple
+    label: "Total Scope 3 Transport Emissions (tCO2e)"
+    type_params:
+      measure: total_emissions
+
+  - name: total_shipments
+    description: "Total count of shipments."
+    type: simple
+    label: "Total Shipments"
+    type_params:
+      measure: shipment_count
+
+  - name: total_rerouted_shipments
+    description: "Total count of Cape of Good Hope rerouted shipments."
+    type: simple
+    label: "Total Rerouted Shipments"
+    type_params:
+      measure: rerouted_shipment_count
+
+  - name: total_cargo_weight_tonnes
+    description: "Total weight of transported goods in metric tonnes."
+    type: simple
+    label: "Total Weight (Tonnes)"
+    type_params:
+      measure: total_weight_tonnes
+
+  # Ratio metrics referencing the base simple metrics
+  - name: cape_reroute_rate
+    description: "Percentage of shipments diverted via the Cape of Good Hope detour."
+    type: ratio
+    label: "Cape Reroute Diversion Rate"
+    type_params:
+      numerator: total_rerouted_shipments
+      denominator: total_shipments
+
+  - name: carbon_intensity_per_tonne
+    description: "Carbon efficiency expressed as tCO2e emitted per metric tonne of freight delivered."
+    type: ratio
+    label: "Carbon Intensity (tCO2e / Tonne)"
+    type_params:
+      numerator: total_scope3_emissions_tco2e
+      denominator: total_cargo_weight_tonnes

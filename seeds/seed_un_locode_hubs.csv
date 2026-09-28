@@ -1,0 +1,11 @@
+locode,hub_name,country_code,hub_type,latitude,longitude
+NLRTM,Port of Rotterdam,NL,SEAPORT,51.9540,4.1430
+BEANR,Port of Antwerp-Bruges,BE,SEAPORT,51.2750,4.3210
+DEHAM,Port of Hamburg,DE,SEAPORT,53.5320,9.9740
+CNSHA,Port of Shanghai,CN,SEAPORT,31.2304,121.4737
+CNNBO,Port of Ningbo-Zhoushan,CN,SEAPORT,29.8683,121.5440
+INBOM,Jawaharlal Nehru Port Mumbai,IN,SEAPORT,18.9499,72.9515
+VNVUT,Port of Vung Tau,VN,SEAPORT,10.3540,107.0780
+DEDUI,Duisburg Rhine Intermodal Hub,DE,INLAND_TERMINAL,51.4420,6.7580
+DEMHG,Mannheim Inland Port,DE,INLAND_TERMINAL,49.4930,8.4550
+FRLYS,Lyon Port Edouard Herriot,FR,INLAND_TERMINAL,45.7190,4.8320

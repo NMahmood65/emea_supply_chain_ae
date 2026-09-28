@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: dim_hubs
+    description: "Conformed dimension of international maritime and European intermodal hubs."
+    columns:
+      - name: hub_locode
+        description: "Primary key (UN/LOCODE)"
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_shipment_carbon_reconciliation
+    description: "Core fact table uniting PO fulfillment, Red Sea rerouting variance, and Scope 3 GLEC carbon emissions."
+    columns:
+      - name: po_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+
+      - name: destination_hub_locode
+        description: "Foreign key to dim_hubs"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_hubs')
+              field: hub_locode
+
+      - name: total_emissions_tco2e
+        description: "Total shipment carbon emissions"
+        tests:
+          - not_null
+
+      - name: is_cape_reroute
+        description: "Binary flag indicating Suez diversion"
+        tests:
+          - accepted_values:
+              values: [0, 1]

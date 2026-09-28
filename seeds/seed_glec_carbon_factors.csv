@@ -1,0 +1,6 @@
+mode_code,mode_description,vehicle_category,co2e_grams_per_tkm
+OCEAN_DEEP_SEA,Deep Sea Container Vessel,ULCV_18000_TEU,10.2
+OCEAN_FEEDER,Short Sea / Feeder Vessel,FEEDER_2000_TEU,18.4
+INLAND_WATERWAY,Rhine Container Barge,LARGE_BARGE_CEMT_V,31.5
+INLAND_RAIL_ELEC,European Electrified Rail,AVERAGE_GRID_MIX,19.2
+ROAD_EURO_6,Articulated Heavy Duty Truck,EURO_6_DIESEL_40T,64.8

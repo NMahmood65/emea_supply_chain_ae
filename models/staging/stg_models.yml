@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: stg_erp__purchase_orders
+    description: "Standardized and typed purchase orders from ERP."
+    columns:
+      - name: po_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+
+      - name: incoterm
+        description: "Commercial shipping terms"
+        tests:
+          - accepted_values:
+              values: ['FOB', 'CIF', 'DDP']
+
+      - name: origin_port_locode
+        description: "Departure port UN/LOCODE"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('seed_un_locode_hubs')
+              field: locode
+
+      - name: destination_hub_locode
+        description: "Final inland destination UN/LOCODE"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('seed_un_locode_hubs')
+              field: locode
+
+  - name: stg_carrier__milestone_events
+    description: "Standardized container tracking event logs."
+    columns:
+      - name: event_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+
+      - name: po_id
+        description: "Foreign key to purchase order"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_erp__purchase_orders')
+              field: po_id
+
+      - name: carrier_code
+        description: "Ocean/Logistics carrier code"
+        tests:
+          - accepted_values:
+              values: ['MSC', 'MAERSK', 'HAPAG_LLOYD', 'CMA_CGM']
