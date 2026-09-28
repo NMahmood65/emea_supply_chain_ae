@@ -1,4 +1,6 @@
-dbt-duckdb
-duckdb
+setuptools
+wheel
 pandas
 pyarrow
+duckdb
+dbt-duckdb
