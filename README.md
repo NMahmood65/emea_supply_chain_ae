@@ -88,8 +88,6 @@ This project builds a modern, automated data system that models this real-world 
 
 ---
 
----
-
 ## 📊 Executive Reporting & Dashboards
 
 To translate raw shipping telemetry into executive decisions, this project feeds data into two analytical deliverables: an **Excel Financial Risk Model** and an **Interactive Tableau Executive Briefing**.
