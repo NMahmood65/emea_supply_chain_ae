@@ -120,17 +120,6 @@ Below is the executive control tower built in Tableau Public, summarizing operat
 
 ---
 
-## 🚀 How to Run This Project Locally
-
-To run the transformation pipeline and reproduce the datasets on your own machine:
-
-### 1. Prerequisites
-Ensure you have the following installed:
-* [Python 3.10+](https://www.python.org/)
-* [Git](https://git-scm.com/)
-
----
-
 ## 💡 Strategic Recommendations for Leadership
 
 1. **Renegotiate Detention Free Time:** Extend free-dwell agreements with ocean carriers on Cape corridors to protect against unbudgeted port storage fees.
