@@ -133,6 +133,31 @@ This project simulates a real-world analytics engagement, turning raw logistical
 
 ---
 
+---
+
+## 📸 Executive Dashboard Preview
+
+Below is the executive control tower built in Tableau Public, summarizing operational delays, demurrage costs, and carbon intensity by cargo type:
+
+![Global Shipping Disruptions Dashboard](assets/dashboard_preview.png)
+
+> **Interactive Version:** Explore the live dashboard and filter by route and hub on [Tableau Public](YOUR_TABLEAU_PUBLIC_LINK_HERE).
+
+---
+
+## 🚀 How to Run This Project Locally
+
+To run the transformation pipeline and reproduce the datasets on your own machine:
+
+### 1. Prerequisites
+Ensure you have the following installed:
+* [Python 3.10+](https://www.python.org/)
+* [Git](https://git-scm.com/)
+
+### 2. Clone the Repository
+```bash
+git clone [https://github.com/NMahmood65/emea_supply_chain_ae.git](https://github.com/NMahmood65/emea_supply_chain_ae.git)
+cd emea_supply_chain_ae
 ## 💡 Strategic Recommendations for Leadership
 
 1. **Renegotiate Detention Free Time:** Extend free-dwell agreements with ocean carriers on Cape corridors to protect against unbudgeted port storage fees.
