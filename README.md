@@ -112,26 +112,7 @@ To translate raw shipping telemetry into executive decisions, this project feeds
 
 ---
 
-## 🛠️ How This Project Was Built (Step-by-Step)
 
-This project simulates a real-world analytics engagement, turning raw logistical data into executive financial recommendations through four key steps:
-
-### 1. Data Processing & Cleaning (DuckDB & dbt)
-* Ingested and structured 50,000 raw maritime shipment tracking events.
-* Fixed messy arrival records, standardized dates, and identified rerouted vessels traveling via the Cape of Good Hope versus the Suez Canal.
-* Calculated real ocean distances, transit duration, delivery delays, and Scope 3 transport carbon emissions.
-
-### 2. Financial Sensitivity Model (Excel)
-* Built a structured 3-tab financial workbook to calculate container detention penalties under different operational scenarios.
-* Modeled delay costs across destination ports using flexible €/day dwell fee parameters.
-* Created executive comparison tables summarizing total financial exposure between standard and rerouted sailings.
-
-### 3. Interactive Executive Control Tower (Tableau Public)
-* Visualized lead-time variance (+11.8 days) and delivery delay distributions side-by-side.
-* Pinpointed destination bottlenecks across major inland terminals (Duisburg, Mannheim, and Lyon).
-* Highlighted product-level carbon intensity spikes to assess European environmental tax liabilities.
-
----
 
 ---
 
