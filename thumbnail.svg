@@ -1,0 +1,128 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 627" width="1200" height="627">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="627" fill="url(#bgGrad)"/>
+
+  <!-- Subtle Grid Lines -->
+  <g stroke="#334155" stroke-width="1" opacity="0.15">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="627"/>
+    <line x1="400" y1="0" x2="400" y2="627"/>
+    <line x1="600" y1="0" x2="600" y2="627"/>
+    <line x1="800" y1="0" x2="800" y2="627"/>
+    <line x1="1000" y1="0" x2="1000" y2="627"/>
+  </g>
+
+  <!-- TOP HEADER / CATEGORY -->
+  <rect x="70" y="45" width="220" height="32" rx="16" fill="#0284c7" fill-opacity="0.2" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="180" y="66" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" letter-spacing="1.2" text-anchor="middle">ANALYTICS ENGINEERING</text>
+
+  <!-- MAIN HEADLINE -->
+  <text x="70" y="125" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="38" font-weight="800" letter-spacing="-0.5">
+    EMEA Supply Chain Resilience
+  </text>
+  <text x="70" y="172" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="500">
+    &amp; Scope 3 Freight Carbon Accounting
+  </text>
+
+  <!-- MIDDLE SECTION: ROUTE DISRUPTION VISUAL -->
+  <!-- Main Route Card Box -->
+  <rect x="70" y="210" width="1060" height="235" rx="16" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Origin Point: Asia -->
+  <circle cx="970" cy="325" r="10" fill="#38bdf8" filter="url(#glow)"/>
+  <circle cx="970" cy="325" r="5" fill="#ffffff"/>
+  <text x="970" y="365" fill="#e2e8f0" font-family="sans-serif" font-size="15" font-weight="700" text-anchor="middle">Asia Hubs</text>
+  <text x="970" y="385" fill="#94a3b8" font-family="sans-serif" font-size="12" text-anchor="middle">Shanghai / Ningbo / Nhava Sheva</text>
+
+  <!-- Destination Point: Europe -->
+  <circle cx="210" cy="275" r="10" fill="#22c55e" filter="url(#glow)"/>
+  <circle cx="210" cy="275" r="5" fill="#ffffff"/>
+  <text x="210" y="245" fill="#e2e8f0" font-family="sans-serif" font-size="15" font-weight="700" text-anchor="middle">North Sea Gateways</text>
+  <text x="210" y="315" fill="#94a3b8" font-family="sans-serif" font-size="12" text-anchor="middle">Rotterdam / Antwerp / Hamburg</text>
+
+  <!-- ROUTE 1: Disrupted Suez Route (Dashed Red Line) -->
+  <path d="M 970 325 Q 580 230 210 275" fill="none" stroke="#ef4444" stroke-width="3" stroke-dasharray="8,6" opacity="0.85"/>
+  <!-- Disruption Marker on Suez -->
+  <g transform="translate(560, 240)">
+    <rect x="-70" y="-16" width="140" height="30" rx="8" fill="#450a0a" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="0" y="4" fill="#fca5a5" font-family="sans-serif" font-size="12" font-weight="700" text-anchor="middle">⛔ SUEZ DISRUPTION</text>
+  </g>
+
+  <!-- ROUTE 2: Cape Detour (Solid Amber Line) -->
+  <path d="M 970 325 C 820 440, 420 450, 210 275" fill="none" stroke="#f59e0b" stroke-width="3.5" filter="url(#glow)"/>
+  <!-- Detour Callout Tag -->
+  <g transform="translate(570, 395)">
+    <rect x="-135" y="-16" width="270" height="32" rx="8" fill="#451a03" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="0" y="5" fill="#fde68a" font-family="sans-serif" font-size="12" font-weight="700" text-anchor="middle">⚡ CAPE DETOUR: +14 DAYS | +80% CO2e</text>
+  </g>
+
+  <!-- BOTTOM STATS / METRICS CARDS -->
+  <!-- Stat 1 -->
+  <g transform="translate(70, 465)">
+    <rect width="330" height="75" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="24" y="32" fill="#38bdf8" font-family="sans-serif" font-size="24" font-weight="800">500,000</text>
+    <text x="24" y="56" fill="#94a3b8" font-family="sans-serif" font-size="13" font-weight="500">Milestone Events Modeled</text>
+  </g>
+
+  <!-- Stat 2 -->
+  <g transform="translate(435, 465)">
+    <rect width="330" height="75" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="24" y="32" fill="#10b981" font-family="sans-serif" font-size="24" font-weight="800">GLEC Standard</text>
+    <text x="24" y="56" fill="#94a3b8" font-family="sans-serif" font-size="13" font-weight="500">Scope 3 Freight Carbon Accounting</text>
+  </g>
+
+  <!-- Stat 3 -->
+  <g transform="translate(800, 465)">
+    <rect width="330" height="75" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="24" y="32" fill="#a855f7" font-family="sans-serif" font-size="24" font-weight="800">24 / 24 Tests</text>
+    <text x="24" y="56" fill="#94a3b8" font-family="sans-serif" font-size="13" font-weight="500">Automated dbt Schema Contracts</text>
+  </g>
+
+  <!-- FOOTER: TECH STACK PILLS -->
+  <g transform="translate(70, 565)">
+    <text x="0" y="24" fill="#64748b" font-family="sans-serif" font-size="14" font-weight="600">ENGINEERED WITH:</text>
+    
+    <!-- dbt core -->
+    <rect x="150" y="4" width="90" height="28" rx="6" fill="#ff694b" fill-opacity="0.15" stroke="#ff694b" stroke-width="1"/>
+    <text x="195" y="23" fill="#ff8f75" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle">dbt Core</text>
+
+    <!-- DuckDB -->
+    <rect x="250" y="4" width="85" height="28" rx="6" fill="#fff000" fill-opacity="0.12" stroke="#eab308" stroke-width="1"/>
+    <text x="292" y="23" fill="#facc15" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle">DuckDB</text>
+
+    <!-- Python -->
+    <rect x="345" y="4" width="75" height="28" rx="6" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-width="1"/>
+    <text x="382" y="23" fill="#60a5fa" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle">Python</text>
+
+    <!-- CI/CD Passing Badge -->
+    <g transform="translate(430, 4)">
+      <rect width="180" height="28" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1"/>
+      <circle cx="16" cy="14" r="5" fill="#22c55e"/>
+      <text x="28" y="19" fill="#86efac" font-family="sans-serif" font-size="12" font-weight="700">CI / CD Build: Passing</text>
+    </g>
+  </g>
+</svg>
