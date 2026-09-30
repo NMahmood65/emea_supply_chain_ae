@@ -88,6 +88,22 @@ This project builds a modern, automated data system that models this real-world 
 
 ---
 
+---
+
+## 📊 Executive Reporting & Dashboards
+
+To translate raw shipping telemetry into executive decisions, this project feeds data into two analytical deliverables: an **Excel Financial Risk Model** and an **Interactive Tableau Executive Briefing**.
+
+* **Live Interactive Dashboard:** [View on Tableau Public](https://public.tableau.com/app/profile/naser.mahmood/viz/GlobalShippingDisruptionsCosts/ExecutiveSupplyChainBriefing?publish=yes)
+
+### Key Disruption Findings
+
+* **65% of Fleet Diverted:** Nearly two-thirds of ships were rerouted away from the Red Sea around the Cape of Good Hope.
+* **+11.8 Extra Days at Sea:** Detours extended transit times from 43.9 days to 55.7 days, pushing average delivery delays past three weeks (21.2 days).
+* **€82.8M in Late Fees:** Port congestion and container dwell generated over €82.8 million in detention fees across core European rail and river terminals (Duisburg, Mannheim, and Lyon).
+* **+230% Carbon Tax Exposure:** Slower, longer voyages more than tripled emissions, creating an estimated €87.8 million in incremental environmental compliance costs under EU ETS regulations.
+* **High-Risk Cargo:** Electric vehicle (EV) battery shipments saw emissions intensity surge from 45.3 kg to 77.8 kg of CO2e per €1,000 of goods.
+
 ## Key Business Insights Delivered
 
 1. **True Cost of Disruption:** Quantifies the average delay in transit days caused by geopolitical diversions.
