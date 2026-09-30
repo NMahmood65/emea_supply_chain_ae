@@ -154,12 +154,26 @@ Ensure you have the following installed:
 * [Python 3.10+](https://www.python.org/)
 * [Git](https://git-scm.com/)
 
-### 2. Clone the Repository
-```bash
-git clone [https://github.com/NMahmood65/emea_supply_chain_ae.git](https://github.com/NMahmood65/emea_supply_chain_ae.git)
-cd emea_supply_chain_ae
+---
+
 ## 💡 Strategic Recommendations for Leadership
 
 1. **Renegotiate Detention Free Time:** Extend free-dwell agreements with ocean carriers on Cape corridors to protect against unbudgeted port storage fees.
 2. **Inland Hub Rerouting:** Shift rail and barge transport toward Southern European railheads to bypass congestion in northern freight terminals.
 3. **Decouple Battery Supply Chains:** Prioritize local European assembly for heavy, high-value components (like EV batteries) to insulate emissions from Red Sea chokepoints.
+
+---
+
+## 🚀 How to Run This Project Locally
+
+To run the transformation pipeline and reproduce the datasets on your own machine:
+
+### 1. Prerequisites
+Ensure you have the following installed:
+* [Python 3.10+](https://www.python.org/)
+* [Git](https://git-scm.com/)
+
+### 2. Clone the Repository
+```bash
+git clone https://github.com/NMahmood65/emea_supply_chain_ae.git
+cd emea_supply_chain_ae
