@@ -112,10 +112,6 @@ To translate raw shipping telemetry into executive decisions, this project feeds
 
 ---
 
-
-
----
-
 ## 📸 Executive Dashboard Preview
 
 Below is the executive control tower built in Tableau Public, summarizing operational delays, demurrage costs, and carbon intensity by cargo type:
