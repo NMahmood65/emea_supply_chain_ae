@@ -90,10 +90,10 @@ This project builds a modern, automated data system that models this real-world 
 
 ## 📊 Executive Reporting & Dashboards
 
-To translate raw shipping telemetry into executive decisions, this project feeds data into two analytical deliverables: an **Excel Financial Risk Model** and an **Interactive Tableau Executive Briefing**.
+To translate raw shipping telemetry into executive decisions, this project feeds data into two analytical deliverables: an **Excel Financial Risk Model** and an **Interactive Tableau Executive Briefing**
 
 * **Live Interactive Dashboard:** [View on Tableau Public](https://public.tableau.com/app/profile/naser.mahmood/viz/GlobalShippingDisruptionsCosts/ExecutiveSupplyChainBriefing?publish=yes)
-
+* **Financial Risk & Cost Model:** [View Online in Excel for Web](https://1drv.ms/x/c/c497cb947e251d94/IQDFX6Zvuh6FTp-ZFXsRB4KLAUWe8gR--GXnEKeJvhAVfDM?e=gnnDDS) | [Download .xlsx](EMEA_Disruption_Carbon_Analysis.xlsx)
 ### Key Disruption Findings
 
 * **65% of Fleet Diverted:** Nearly two-thirds of ships were rerouted away from the Red Sea around the Cape of Good Hope.
